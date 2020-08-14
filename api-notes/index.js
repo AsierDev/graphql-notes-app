@@ -9,8 +9,6 @@ const host = process.env.MONGO_HOST
 const MongoPort = process.env.MONGO_PORT
 const database = process.env.MONGO_DB
 
-console.log('process.env => ', process.env)
-
 mongoose.Promise = global.Promise;
 mongoose.connect(`mongodb://${host}:${MongoPort}/${database}`, {
   useNewUrlParser: true,
@@ -18,7 +16,7 @@ mongoose.connect(`mongodb://${host}:${MongoPort}/${database}`, {
 });
 
 const app = express();
-const PORT = 4300;
+const PORT = process.env.LOCAL_PORT;
 
 app.get("/", (req, res) => {
   res.json({
