@@ -5,8 +5,17 @@ const typeDefs = `
     type Note {
         _id: ID!
         title: String!,
-        date: Date,
-        content: String!
+        content: String!,
+        done: Boolean!,
+        priority: Priority,
+        date: Date
+        
+    }
+
+    enum Priority {
+        HIGH
+        MEDIUM
+        LOW
     }
 
     scalar Date
@@ -17,13 +26,17 @@ const typeDefs = `
     }
 
     input NoteInput {
-        title: String!
-        content: String!
+        title: String!,
+        content: String!,
+        done: Boolean!,
+        priority: Priority
     }
 
     input NoteUpdateInput {
-        title: String
-        content: String
+        title: String,
+        content: String,
+        done: Boolean,
+        priority: Priority
      }
 
     type Mutation {
