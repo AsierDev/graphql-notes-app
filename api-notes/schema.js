@@ -6,7 +6,7 @@ const typeDefs = `
         _id: ID!
         title: String!,
         content: String!,
-        done: Boolean!,
+        done: Boolean,
         priority: Priority,
         date: Date
         
@@ -28,7 +28,7 @@ const typeDefs = `
     input NoteInput {
         title: String!,
         content: String!,
-        done: Boolean!,
+        done: Boolean,
         priority: Priority
     }
 

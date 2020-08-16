@@ -14,7 +14,6 @@ const NoteSchema = new Schema({
     done: {
         type: Boolean,
         default: false,
-        required: true
     },
     priority: {
         type: String,
