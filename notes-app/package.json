@@ -1,5 +1,5 @@
 {
-  "name": "basic-react-webpack-boilerplate",
+  "name": "notes-app",
   "version": "1.0.0",
   "description": "",
   "author": "Asier <https://github.com/AsierDev>",
@@ -31,8 +31,12 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.9",
     "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.2.0"
   }
 }
